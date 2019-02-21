@@ -14,12 +14,16 @@ nav {
   left: 50%;
   transform: translateX(-50%);
   width: 85%;
-  height: 10vh;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
   z-index: 100;
   backface-visibility: hidden;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+}
+
+.navbar-nav {
+  margin-left: auto;
+  background-color: #dc3545;
 }
 
 .wrapper {
@@ -73,12 +77,8 @@ nav {
   color: #dc3545;
 }
 
-input:focus {
-  outline: none !important;
-}
-
 input[type="submit"] {
-  background-color: #ccc;
+  background-color: rgb(120, 120, 120);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
   transform: translateY(-1px);
   color: #fff;
@@ -88,11 +88,20 @@ input[type="submit"] {
 input[type="submit"]:active {
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.4);
   transform: translateY(0);
-  background-color: rgb(195, 195, 195);
+  background-color: rgb(100, 100, 100);
 }
 
 input[type="submit"]:hover {
-  background-color: rgb(195, 195, 195);
+  background-color: rgb(100, 100, 100);
+}
+
+input::-webkit-input-placeholder {
+  font-size: 1rem;
+}
+
+.slideInDown {
+  -webkit-animation: slideInDown 1s;
+  animation: slideInDown 1s;
 }
 
 /* ============== ANIMATION =============== */
@@ -121,11 +130,6 @@ input[type="submit"]:hover {
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
   }
-}
-
-.slideInDown {
-  -webkit-animation: slideInDown 1s;
-  animation: slideInDown 1s;
 }
 
 @-webkit-keyframes swing {
@@ -179,5 +183,21 @@ input[type="submit"]:hover {
   to {
     -webkit-transform: rotate3d(0, 0, 1, 0deg);
     transform: rotate3d(0, 0, 1, 0deg);
+  }
+}
+
+/* ============== MEDIA QUERIES =============== */
+
+@media (max-width: 576px) {
+  .navbar-item:hover {
+    transform: scale(1);
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h4 {
+    font-size: 1rem;
   }
 }
