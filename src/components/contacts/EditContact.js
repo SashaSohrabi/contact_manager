@@ -79,41 +79,43 @@ class EditContact extends Component {
         {value => {
           const { dispatch } = value;
           return (
-            <div className="card mb-3">
-              <div className="card-header">Edit Contact</div>
-              <div className="card-body">
-                <form onSubmit={this.onSubmit.bind(this, dispatch)}>
-                  <TextInputGroup
-                    label="Name"
-                    name="name"
-                    placeholder="Enter Name"
-                    value={name}
-                    onChange={this.onChange}
-                    error={errors.name}
-                  />
-                  <TextInputGroup
-                    label="Email"
-                    name="email"
-                    type="email"
-                    placeholder="Enter Email"
-                    value={email}
-                    onChange={this.onChange}
-                    error={errors.email}
-                  />
-                  <TextInputGroup
-                    label="Phone"
-                    name="phone"
-                    placeholder="Enter Phone"
-                    value={phone}
-                    onChange={this.onChange}
-                    error={errors.phone}
-                  />
-                  <input
-                    type="submit"
-                    value="Update Contact"
-                    className="btn btn-block"
-                  />
-                </form>
+            <div className="wrapper">
+              <div className="card edit-contact">
+                <div className="card-header">Edit Contact</div>
+                <div className="card-body">
+                  <form onSubmit={this.onSubmit.bind(this, dispatch)}>
+                    <TextInputGroup
+                      label="Name"
+                      name="name"
+                      placeholder="Enter Name"
+                      value={name}
+                      onChange={this.onChange}
+                      error={errors.name}
+                    />
+                    <TextInputGroup
+                      label="Email"
+                      name="email"
+                      type="email"
+                      placeholder="Enter Email"
+                      value={email}
+                      onChange={this.onChange}
+                      error={errors.email}
+                    />
+                    <TextInputGroup
+                      label="Phone"
+                      name="phone"
+                      placeholder="Enter Phone"
+                      value={phone}
+                      onChange={this.onChange}
+                      error={errors.phone}
+                    />
+                    <input
+                      type="submit"
+                      value="Update Contact"
+                      className="btn btn-block"
+                    />
+                  </form>
+                </div>
               </div>
             </div>
           );
