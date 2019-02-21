@@ -41,26 +41,12 @@ class Contact extends Component {
                     })
                   }
                   className="fas fa-sort-down"
-                  style={{ cursor: "pointer" }}
                 />
                 <Link to={`contact/edit/${id}`}>
-                  <i
-                    className="fas fa-pencil-alt"
-                    style={{
-                      cursor: "pointer",
-                      float: "right",
-                      color: "black",
-                      marginLeft: "1rem"
-                    }}
-                  />
+                  <i className="fas fa-pencil-alt" />
                 </Link>
                 <i
                   className="fas fa-times"
-                  style={{
-                    cursor: "pointer",
-                    float: "right",
-                    color: "red"
-                  }}
                   onClick={this.onDeleteClick.bind(this, id, dispatch)}
                 />
               </h4>

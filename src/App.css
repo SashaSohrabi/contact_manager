@@ -1,0 +1,16 @@
+.fa-sort-down {
+  cursor: pointer;
+}
+
+.fa-pencil-alt {
+  cursor: pointer;
+  float: right;
+  color: black;
+  margin-left: 1rem;
+}
+
+.fa-times {
+  cursor: pointer;
+  float: right;
+  color: red;
+}
