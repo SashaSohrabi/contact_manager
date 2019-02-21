@@ -1,3 +1,5 @@
+# Contact Manager [Click here to see the project](https://sashasohrabi.github.io/contact_manager/#/)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
